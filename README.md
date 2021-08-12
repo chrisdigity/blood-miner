@@ -1,4 +1,6 @@
 # Mochimo Miner/Worker
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchrisdigity%2Fblood-miner.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchrisdigity%2Fblood-miner?ref=badge_shield)
+
 **Please note!**  
 This miner is currently ONLY designed to work with a Proxy Client on Mochimo's [illamanudi Mining Pool](https://illamanudi.com/).
 
@@ -80,3 +82,7 @@ cd ~/blood-miner/bin
 If you encounter this error, make sure you have access to your installation location, otherwise this command should fix any issues:  
 ```chmod +x ~/blood-miner/bin/unix/worker ~/blood-miner/bin/startworker.sh```
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fchrisdigity%2Fblood-miner.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fchrisdigity%2Fblood-miner?ref=badge_large)
