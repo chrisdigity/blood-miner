@@ -1,2 +1,2 @@
 @ECHO OFF
-start cmd /k "win32\worker.exe -p2195 -wMyWorker -l"
+start cmd /k ".\win32\mochiminer.exe --host localhost --port 2195"
