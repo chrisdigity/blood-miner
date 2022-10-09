@@ -1,7 +1,15 @@
 # Mochimo Miner/Worker
 **Please note!**  
-This miner is currently ONLY designed to work with a Proxy Client on Mochimo's [illamanudi Mining Pool](https://illamanudi.com/).
+This miner is originally designed to work with a Proxy Client on Mochimo's [illamanudi Mining Pool](https://illamanudi.com/), but also works with headless and Solo mining.
 
+## Download or Clnoe Repo
+Check the [Latest Release](https://github.com/chrisdigity/blood-miner/tags).
+Or Clone the repository with `git`:
+```
+git clone https://github.com/chrisdigity/blood-miner
+```
+
+https://github.com/chrisdigity/blood-miner/releases/tag/v1.0.0
 ## Windows Instructions
 
 **Basic Windows Setup and Run**  
@@ -26,49 +34,11 @@ With the exception of the `export` command, you may follow the **Linux Instructi
 ```
 
 &nbsp;  
-**Installation**  
-<sup>Install the miner to the `~/blood-miner` directory</sup>
-```
-git clone https://github.com/chrisdigity/blood-miner ~/blood-miner
-```
-
-&nbsp;  
-**Update Installation (Stable)**  
-<sup>Update an installation to the latest VERSION of the miner</sup>
-```
-cd ~/blood-miner
-git checkout main
-git pull origin main
-git fetch --tags
-git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
-```
-
-&nbsp;  
-**Update Installation (Bleeding-Edge)**  
-<sup>Update an installation to the very LATEST miner</sup>
-```
-cd ~/blood-miner
-git checkout main
-git pull origin main
-```
-
-&nbsp;  
-**Downgrade Installation (e.g. v0.9.6)**  
-<sup>Downgrade an installation an OLDER version of the miner</sup>
-```
-cd ~/blood-miner
-git checkout main
-git pull origin main
-git fetch --tags
-git checkout v0.9.6
-```
-
-&nbsp;  
 **Start Mining**
 ```
 cd ~/blood-miner/bin/unix
 export LD_LIBRARY_PATH=~/blood-miner/bin/unix/:$LD_LIBRARY_PATH
-./worker -w<WORKER_NAME> -a<PROXY_CLIENT_IP> -p2195 -l
+./worker --pool <PROXY_CLIENT_IP> --port <PROXY_CLIENT_PORT> --name <WORKER_NAME>
 
 # OR, for localhost proxy only...
 cd ~/blood-miner/bin
@@ -78,5 +48,5 @@ cd ~/blood-miner/bin
 &nbsp;  
 **HELP! Permission denied...**  
 If you encounter this error, make sure you have access to your installation location, otherwise this command should fix any issues:  
-```chmod +x ~/blood-miner/bin/unix/worker ~/blood-miner/bin/startworker.sh```
+```chmod +x ~/blood-miner/bin/unix/miner```
 

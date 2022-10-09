@@ -1,2 +1,0 @@
-@ECHO OFF
-start cmd /k ".\win32\mochiminer.exe --host localhost --port 2195"
